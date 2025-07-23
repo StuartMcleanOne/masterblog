@@ -1,5 +1,20 @@
 [
-    {"id": 1, "author": "John Doe", "title": "First Post", "content": "This is my first post."},
-    {"id": 2, "author": "Jane Doe", "title": "Second Post", "content": "This is another post."}
-
+    {
+        "id": 1,
+        "author": "John Doe",
+        "title": "First Post",
+        "content": "This is my first post."
+    },
+    {
+        "id": 2,
+        "author": "Jane Doe",
+        "title": "Second Post",
+        "content": "This is another post.This is checking whether the update function works\r\n"
+    },
+    {
+        "id": 3,
+        "author": "Stuart",
+        "title": "First Post",
+        "content": "This is my first post"
+    }
 ]
