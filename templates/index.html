@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flask Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to My Flask Blog!</h1>
+    <a href="{{ url_for('add') }}">Add a New Blog Post</a>
+    {% for post in posts %}
+    <div class="post">
+        <h2>{{ post.title }}</h2>
+        <p><em>Written by {{ post.author }}</em></p>
+        <p>{{ post.content }}</p>
+
+        <!-- Update Button -->
+        <a href="{{ url_for('update', post_id=post.id) }}">Update</a>
+
+        <!-- Delete form: Sends a post request to /delete/<post_id> -->
+        <form method="POST" action="{{ url_for('Delete', post_id=post.id) }}" style="margin-top: 10px;">
+            <input type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete this post?');">
+        </form>
+
+    </div>
+    {% endfor %}
+
+
+</body>
+</html>
